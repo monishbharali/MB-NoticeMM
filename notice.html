@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title style="background-color: crimson;color: aliceblue;">Create Notice</title>
+  <script>
+    function validateForm() {
+      var title = document.getElementById("title").value;
+      var description = document.getElementById("description").value;
+
+      if (title.trim() === "" || description.trim() === "") {
+        alert("Please enter a title and description for the notice.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1 style="background-color: crimson;color: aliceblue;padding:100px;">Create Notice</h1>
+  <form method="POST" action="create_notice.php" onsubmit="return validateForm();">
+    <h1 style="background-color: orangered;">NOTICE TITLE:</h1>
+    <label for="title" style="color: crimson;height:auto;">Enter The Title:</label>
+    <input type="text" placeholder="ENTER THE TITLE" name="title" required style="display:inline-flexbox;height: 50px;width: 500px;"><br><br>
+    <h1 style="background-color: orangered;">DESCRIPTION BOX:</h1>
+    <label for="description" style="color: crimson;">Notice Description:</label>
+    <textarea id="description" placeholder="ENTER THE DESCRIPTION" name="description" required style="height: 50px;width: 500px;"></textarea><br><br>
+
+    <input type="submit" value="Create" style="position: relative;height:50px ;width: 500px;">
+  </form>
+</body>
+</html>
+
