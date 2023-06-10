@@ -45,7 +45,7 @@
 
   <!-- Create a new notice form -->
   <h2>Create Notice:</h2>
-  <form method="POST" action="index.php">
+  <form method="POST" action="create_notice.php">
     <label for="title">Notice Title:</label>
     <input type="text" id="title" name="title" required><br><br>
 
